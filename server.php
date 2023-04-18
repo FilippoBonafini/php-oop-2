@@ -11,7 +11,7 @@ foreach ($products_db as $key => $product) {
         new Product(
             $product['name'],
             $product['description'],
-            new Animal('cat'),
+            new Animal(),
             $product['category'],
             $product['price']
         )
