@@ -1,18 +1,18 @@
 <?php
-require_once __DIR__ . '/Animal.php';
 
 class Product
 {
     private $name;
     private $description;
-    private $category;
     private $animal;
+    private $category;
     private $price;
 
-    public function __construct(string $_name, string $_description, string $_category, Animal $animal, int $_price)
+    public function __construct(string $_name, string $_description, string $_animal, string $_category, int $_price)
     {
         $this->name = $_name;
         $this->description = $_description;
+        $this->animal = $_animal;
         $this->category = $_category;
         $this->price = $_price;
     }
@@ -30,11 +30,6 @@ class Product
     public function get_category()
     {
         return $this->category;
-    }
-
-    public function get_animal()
-    {
-        return $this->animal;
     }
 
     public function get_price()
